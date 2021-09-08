@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jsstyle.css">
+</head>
+<body>
+    <div class="bg-modal">
+        <div class="modal-content">
+            <h5>Instructions</h5>
+            <ol id="instruct">
+                <li>Choose a Hero from the bottom left corner</li>
+                <li>Drag the items you want for the hero</li>
+                <li>Item stats will automatically add to the basic stat of the Hero</li>
+                <li>You can reset all by clicking the button below the stat box</li>
+            </ol>
+            <div class="butBox">
+                <button id="start">Start</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <h1>Character Simulator</h1>
+    <div class="maincon">
+                        <!-- Ondrop - element dragged/ ondragover -drop to target  -->
+        <div class="container1">
+                <h2>Item 1</h2>
+                <div class="subcon1">
+                    <div class="box item1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                    <div class="itemStat">
+                        <h5>Strenght</h5>
+                        <div id="itemStr">1</div>
+                        <h5>Agility</h5>
+                        <div id="itemAgi">2</div>
+                        <h5>Intelegent</h5>
+                        <div id="itemInt">3</div>
+                    </div>
+                </div>
+            
+
+                <h2>Item 2</h2>
+                <div class="box item2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <h2>Item 3</h2>
+                <div class="box item3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        
+        <div class="container2">
+            <div class="boxbig">
+                <img id="mainHero" src="image/GIF/dota.gif" alt="dota">
+            </div>
+        </div>
+
+        <div class="container3">
+            <h2>Item 4</h2>
+            <div class="box item4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Item 5</h2>
+            <div class="box item5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Item 6</h2>
+            <div class="box item6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+    </div>
+    <div class="stats">
+        <h2>Hero Basic Stats</h2>
+        <div class="statsBox">
+            <div class="statimg str">
+                <h4>Strenght</h4>
+                <img src="image/Stats/Strenght.PNG" alt="Strenght"/>
+                <div id="heroStr"></div>
+            </div>
+            <div class="statimg agi">
+                <h4>Agility</h4>
+                <img src="image/Stats/Agility.PNG" alt="Agility"/>
+                <div id="heroAgi"></div>
+            </div>
+            <div class="statimg int">
+                <h4>Intelegent</h4>
+                <img src="image/Stats/Int.PNG" alt="Intelegent"/>
+                <div id="heroInt"></div>
+            </div>
+        </div>
+        <button id="reset">Reset</button>
+    </div>
+    
+    
+    
+    <div class="twoBox">
+        <div class="sub1">
+            <h3>Hero</h3>
+            <div class="conHero">
+                <div class="heroBox">
+                    <img src="image/GIF/axe.gif" alt="axe">
+                    <div class="overlay">
+                        <div class="heroName">Axe</div>
+                    </div>
+                </div>
+                <div class="heroBox">
+                    <img src="image/GIF/jugg.gif" alt="jugg">
+                    <div class="overlay">
+                        <div class="heroName">Jugg</div>
+                    </div>
+                </div>
+                <div class="heroBox">
+                    <img src="image/GIF/legion.gif" alt="legion">
+                    <div class="overlay">
+                        <div class="heroName">Legion Commander</div>
+                    </div>
+                </div>
+                <div class="heroBox">
+                    <img src="image/GIF/phantom.gif" alt="phantom">
+                    <div class="overlay">
+                        <div class="heroName">Phantom Assassin</div>
+                    </div>
+                </div>
+                <div class="heroBox">
+                    <img src="image/GIF/Rubrick.gif" alt="rubrick">
+                    <div class="overlay">
+                        <div class="heroName">Rubrick</div>
+                    </div>
+                </div>
+                <div class="heroBox">
+                    <img src="image/GIF/sven.gif" alt="sven">
+                    <div class="overlay">
+                        <div class="heroName">Sven</div>
+                    </div>
+                </div>
+                <div class="heroBox">
+                    <img src="image/GIF/zeus.gif" alt="zeus">
+                    <div class="overlay">
+                        <div class="heroName">Zeus</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+        <div class="sub2">
+            <h3>Items</h3>
+            <div class="conSkills" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/threads.PNG" draggable="true" ondragstart="drag(event)" id="threads"  alt="threads">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/phase.PNG" draggable="true" ondragstart="drag(event)" id="phase" alt="phase">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/arcane.PNG" draggable="true" ondragstart="drag(event)" id="arcane" alt="arcane">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/Tranquil.PNG" draggable="true" ondragstart="drag(event)" id="tranquil" alt="tranquil">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/Wraith.PNG" draggable="true" ondragstart="drag(event)" id="wraith" alt="wraith">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/basher.PNG" draggable="true" ondragstart="drag(event)" id="basher" alt="basher">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/battlefury.PNG" draggable="true" ondragstart="drag(event)" id="battlefury" alt="battlefury">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image//crystalist.PNG" draggable="true" ondragstart="drag(event)" id="crystalist" alt="crystalist">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/cuiras.PNG" draggable="true" ondragstart="drag(event)" id="cuiras" alt="cuiras">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/deadalus.PNG" draggable="true" ondragstart="drag(event)" id="deadalus" alt="deadalus">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/desolator.PNG" draggable="true" ondragstart="drag(event)" id="desolator" alt="desolator">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/dominator.PNG" draggable="true" ondragstart="drag(event)" id="dominator" alt="dominator">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/dorcestaff.PNG" draggable="true" ondragstart="drag(event)" id="dorcestaff" alt="dorcestaff">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/manta.PNG" draggable="true" ondragstart="drag(event)" id="manta" alt="manta">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/mjolnir.PNG" draggable="true" ondragstart="drag(event)" id="mjolnir" alt="mjolnir">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/mkb.PNG" draggable="true" ondragstart="drag(event)" id="mkb" alt="mkb">
+                </div>
+                <div class="skillBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="image/skadi.PNG" draggable="true" ondragstart="drag(event)" id="skadi" alt="skadi">
+                </div>
+            </div>
+        </div>
+            
+    </div>
+    <script>
+        let charName = ["axe", "jugg", "legion", "phantom", "rubrick", "sven", "zeus"];
+        let itemName = ["threads", "phase","arcane" ,"tranquil", "wraith", "basher",  "battlefury", "crystalist", "cuiras", "deadalus", "desolator", "dominator", "dorcestaff", "manta", "mjolnir", "mkb", "skadi"];
+
+        const item1 = document.querySelector(".item1");
+        const item2 = document.querySelector(".item2");
+        const item3 = document.querySelector(".item3");
+        const item4 = document.querySelector(".item4");
+        const item5 = document.querySelector(".item5");
+        const item6 = document.querySelector(".item6");
+        const item1Choice = document.querySelectorAll(".conSkills .skillBox img");
+        //outputs
+        const resultStr1 = document.querySelector("#itemStr");
+        const resultAgi1 = document.querySelector("#itemAgi");
+        const resultInt1 = document.querySelector("#itemInt");
+
+        //Drag and Drop function for items 
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+        function drag(ev){
+            ev.dataTransfer.setData("image/png",ev.target.id);
+        }
+        function drop(ev){
+            ev.preventDefault();
+            let data = ev.dataTransfer.getData("image/png");
+            let item = document.querySelector("#" +data);
+            ev.target.appendChild(document.getElementById(data));
+            console.log(item);
+        }
+
+
+        // item1Choice.forEach(function (itemchoice){
+        //     itemchoice.addEventListener("drop", function (){
+        //         ev.preventDefault();
+        //     let data = ev.dataTransfer.getData("image/png");
+        //     ev.target.appendChild(document.getElementById(data));
+        //         let Hitem1 = item1Choice.alt;
+
+        //         if(Hitem1 === "threads"){
+        //             resultStr1.textContent = 20;
+        //             resultAgi1.textContent = 25;
+        //             resultInt1.textContent = 35;
+        //         }
+        //     });
+        // });
+
+        //hero change gif for 2nd container
+        const mainDisplay = document.querySelector("#mainHero");
+        //image location when change
+        const choices = document.querySelectorAll(".conHero .heroBox img");
+        //outputs
+        const resultStr = document.querySelector("#heroStr");
+        const resultAgi = document.querySelector("#heroAgi");
+        const resultInt = document.querySelector("#heroInt");
+
+        choices.forEach(function (choice){
+            choice.addEventListener("click", function (){
+                let hero = choice.alt;
+                mainDisplay.src = "image/GIF/"+ hero + ".gif";
+               
+                if(hero === "axe"){
+                    resultStr.textContent = 28.4;
+                    resultAgi.textContent = 22.2;
+                    resultInt.textContent = 19.6;
+                }else if(hero === "jugg"){
+                    resultStr.textContent = 22.2;
+                    resultAgi.textContent = 36.8;
+                    resultInt.textContent = 15.6;
+                }else if(hero === "legion"){
+                    resultStr.textContent = 24.2;
+                    resultAgi.textContent = 38.8;
+                    resultInt.textContent = 19.6;
+                }else if(hero == "phantom"){
+                    resultStr.textContent = 16.2;
+                    resultAgi.textContent = 37.9;
+                    resultInt.textContent = 16.6;
+                }else if(hero === "rubrick"){
+                    resultStr.textContent = 15.6;
+                    resultAgi.textContent = 15.8;
+                    resultInt.textContent = 26.6;
+                }else if(hero === "sven"){
+                    resultStr.textContent = 32.2;
+                    resultAgi.textContent = 18.1;
+                    resultInt.textContent = 11.6;
+                }else {
+                    resultStr.textContent = 17.1;
+                    resultAgi.textContent = 22.6;
+                    resultInt.textContent = 26.6;
+                }    
+            });
+
+        });
+
+        //reset button
+        let btnReset = document.querySelector("#reset");
+        btnReset.addEventListener("click", function () {
+            resultStr.textContent = ' ';
+            resultAgi.textContent = ' ';
+            resultInt.textContent = ' ';
+            mainDisplay.src = "image/GIF/dota.gif"
+            item1.textContent = ' ';
+            item2.textContent = ' ';
+            item3.textContent = ' ';
+            item4.textContent = ' ';
+            item5.textContent = ' ';
+            item6.textContent = ' ';
+        });
+
+        //close button
+        document.querySelector("#start").addEventListener('click', function(){
+            document.querySelector('.bg-modal').style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>
